@@ -1,0 +1,102 @@
+.game-details {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #ffffff;
+    background-color: var(--color-purple);
+}
+
+.game-details__game-info {
+    min-height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-details__text {
+    margin-left: 30px;
+}
+
+.game-name {
+    font-size: 50px;
+    font-weight: var(--general-font-weight);
+}
+
+.game-date {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.game-details__game-charts {
+    min-height: 275px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game-details__campaign {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game-details__campaign-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-details__campaign-form > div {
+    margin: 10px;
+}
+
+.game-details__campaign-chart{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-input {
+    outline: none;
+    font-weight: var(--general-font-weight);
+    padding: 10px;
+    border-radius: 10px;
+    border-color: var(--color-pink);
+    color: var(--color-pink);
+}
+
+/* Styles for Material UI Select */
+.MuiInputLabel-root, .MuiSvgIcon-root {
+    color: var(--color-white) !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+    border-color: var(--color-white) !important;
+}
+.MuiAlert-message {
+    color: var(--color-black);
+    font-weight: var(--general-font-weight);
+}
+/* end */
+
+@media (max-width: 720px) {
+    .game-details__game-charts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-details__campaign {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-details__campaign-form {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

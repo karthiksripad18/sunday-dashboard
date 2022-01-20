@@ -1,0 +1,54 @@
+.navbar {
+    color: var(--color-white);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: 0.6s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.yellow-background {
+    background-color: var(--color-yellow);
+}
+
+.purple-background {
+    background-color: var(--color-purple);
+}
+
+.white-background {
+    background-color: var(--color-white);
+}
+
+.black-text {
+    color: var(--color-black);
+}
+
+.white-text {
+    color: var(--color-white);
+}
+
+.navbar-header {
+    width: 100%;
+    text-align: center;
+}
+
+.sticky {
+    color: var(--color-black);
+    background-color: var(--color-white);
+}
+
+.company-logo {
+    margin-left: 40px;
+}
+
+@media (max-width: 400px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .company-logo {
+        margin-left: 0px;
+    }
+}

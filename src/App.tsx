@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { lazy, Suspense } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import ReactLoading from 'react-loading';
+
+import Overview from './pages/Overview/Overview';
+import Navbar from './components/Navbar/Navbar';
+
+import './App.css';import PageNotFound from './pages/PageNotFound/PageNotFound';
+;
+
+const GameDetails = lazy(() => import('./pages/GameDetails/GameDetails'));
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Navbar />
+      <Switch>
+        <Route path="/" exact>
+          <Overview />
+        </Route>
+        <Route path="/game/:id">
+          <Suspense fallback={<ReactLoading type={'spin'} color={'white'} height={75} width={75} />}>
+            <GameDetails />
+          </Suspense>
+        </Route>
+        <Route path="*">
+          <PageNotFound />
+        </Route>
+      </Switch>
     </div>
   );
 }

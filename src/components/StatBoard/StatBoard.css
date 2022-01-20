@@ -1,0 +1,28 @@
+.stat-board {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-board > p {
+    text-align: center;
+}
+
+.stat-board__count {
+    font-size: 50px;
+    font-weight: var(--general-font-weight);
+    height: 70%;
+}
+
+.stat-board__name {
+    height: 20%;
+}
+
+@media (max-width: 720px) {
+    .stat-board__count {
+        font-size: 25px;
+    }
+
+    .stat-board__name {
+        font-size: 12px;
+    }
+}
